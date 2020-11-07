@@ -1,8 +1,3 @@
-
-
-
-
-
 node
 {
   stage('scm')
@@ -17,7 +12,8 @@ node
    {
      archive 'target/*.jar'
    }
+  stage('junit results')
+   {
+    junit 'target/surefire-reports/*.xml'
+    }
 }
-
-
-
