@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Downloading source code ') {
             steps {
-                git branch: 'main', url: 'https://github.com/spring-projects/spring-petclinic.git'
+                git branch: 'tester', url: 'https://github.com/spring-projects/spring-petclinic.git'
 
             }
         }
@@ -19,11 +19,6 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
             }
         }
-        stage('junit test results'){
-            steps{
-                junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
-
-            }
-        }
+        
     }
 }     
