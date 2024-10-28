@@ -86,7 +86,7 @@ There is a `petclinic.css` in `src/main/resources/static/resources/css`. It was 
 
 ## Working with Petclinic in your IDE
 
-### Prerequisites
+### Prerequisites testing pollscm
 
 The following items should be installed in your system:
 
