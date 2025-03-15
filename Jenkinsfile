@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/shivakumarkokomuravelly/spring-petclinic.git'
+                git branch: 'dev', url: 'https://github.com/shivakumarkokomuravelly/spring-petclinic.git'
             }
         }
         stage('Build artifcat'){
