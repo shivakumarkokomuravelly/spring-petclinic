@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    triggers { pollSCM('*/1 * * * *') }
+    
     stages {
         stage('cloning the repo'){
             steps{
@@ -17,11 +17,7 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
             }
         }
-        stage('junit test results'){
-            steps{
-                junit 'target/surefire-reports/*.xml'
-            }
-        }  
+        
     }
 
 
