@@ -15,15 +15,6 @@ pipeline{
                         sh 'mvn package'
                     }
                 }
-                stage("Archiving artifacts"){
-                    steps{
-                        archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
-                    }
-                }
-                stage("JUnit Test results"){
-                    steps{
-                        junit 'target/surefire-reports/*.xml'
-                    }
-                }
+                
             }
           }
